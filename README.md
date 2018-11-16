@@ -1,3 +1,9 @@
+### For throw cartoons demo
+
+Below is the original README from the [MatterJS](https://github.com/liabru/matter-js) repo. Peep the "Building and Contributing" section to build it. I changed the `Render.bodies` function in the `/src/render/Render.js` file at line 616. This file determines how the canvas is rendered. The file directory under `src` is pretty clean, I would recommend poking around the different directories to understand big picture how the lib works. 
+
+
+
 <img alt="Matter.js" src="http://brm.io/matter-js/img/matter-js.svg" width="300">
 
 > *Matter.js* is a JavaScript 2D rigid body physics engine for the web
