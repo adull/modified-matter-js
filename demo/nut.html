@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ok</title>
+  <link href="index.min.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="gradient-item-canvas"></canvas>
+  <div class="controls-section-wrapper">
+    <div class="controls-section">
+      <div class="controls-title">
+        Controls
+      </div>
+      <div class="controls-body">
+        <div class="control">
+          <input type="checkbox" id="physics" name="feature"
+                 value="scales" />
+          <label for="physics">Turn physics on</label>
+        </div>
+        <div class="control">
+          <input type="checkbox" id="font" name="feature"
+                 value="scales" />
+          <label for="font">Change type face</label>
+        </div>
+        <div class="control">
+          <input type="checkbox" id="animal" name="feature"
+                 value="scales" />
+          <label for="animal">Change animal</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="./poly-decomp.js" ></script>
+  <script src="./pathseg.js"></script>
+  <script src="./matter.js" ></script>
+  <!-- <script src="/custom_render.js" ></script> -->
+  <script src="./index.js"></script>
+</body>
+</html>

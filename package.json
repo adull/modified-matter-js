@@ -1,5 +1,5 @@
 {
-  "name": "matter-js",
+  "name": "matter",
   "version": "0.14.2",
   "license": "MIT",
   "homepage": "http://brm.io/matter-js/",
@@ -8,7 +8,7 @@
   "main": "build/matter.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liabru/matter-js.git"
+    "url": "git+https://github.com/liabru/matter-js.git"
   },
   "keywords": [
     "javascript",
@@ -58,5 +58,12 @@
     "src",
     "build",
     "CHANGELOG.md"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/liabru/matter-js/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }

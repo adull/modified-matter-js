@@ -648,19 +648,34 @@ var Mouse = require('../core/Mouse');
                         texture = _getTexture(render, sprite.texture);
 
                     c.translate(part.position.x, part.position.y);
-                    c.rotate(part.angle);
+                    // c.rotate(part.angle);
+                    // c.rotate(body.angle* Math.PI / 180);
 
+                    // c.drawImage(
+                    //     texture,
+                    //     texture.width * -sprite.xOffset * sprite.xScale,
+                    //     texture.height * -sprite.yOffset * sprite.yScale,
+                    //     texture.width * sprite.xScale,
+                    //     texture.height * sprite.yScale
+                    // );
                     c.drawImage(
                         texture,
-                        texture.width * -sprite.xOffset * sprite.xScale,
-                        texture.height * -sprite.yOffset * sprite.yScale,
+                        // texture.width * -sprite.xOffset * sprite.xScale,
+                        // texture.height * -sprite.yOffset * sprite.yScale,
+                        // body.position.x - sprite.xOffset * sprite.xScale,
+                        // body.position.x - sprite.yOffset * sprite.yScale,
+                        (body.position.x - sprite.xOffset) * sprite.xScale,
+                        (body.position.y - sprite.yOffset) * sprite.yScale,
                         texture.width * sprite.xScale,
                         texture.height * sprite.yScale
                     );
 
                     // revert translation, hopefully faster than save / restore
-                    c.rotate(-part.angle);
-                    c.translate(-part.position.x, -part.position.y);
+                    // c.rotate(-part.angle);
+                    c.rotate((body.angle * Math.PI / 180) * -1);
+                    c.translate(-part.position.x * sprite.xScale, -part.position.y * sprite.yScale);
+                    // c.translate(body.position.x * -1, body.position.y * -1);
+                    // c.translate(body.position.x, body.position.y);
                 } else {
                     // part polygon
                     if (part.circleRadius) {
