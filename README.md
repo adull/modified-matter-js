@@ -1,7 +1,10 @@
 ### For throw cartoons demo
 
-Below is the original README from the [MatterJS](https://github.com/liabru/matter-js) repo. Peep the "Building and Contributing" section to build it. I changed the `Render.bodies` function in the `/src/render/Render.js` file at line 616. This file determines how the canvas is rendered. The file directory under `src` is pretty clean, I would recommend poking around the different directories to understand big picture how the lib works. 
+Below is the original README from the [MatterJS](https://github.com/liabru/matter-js) repo. Peep the "Building and Contributing" section to build it. I changed the `Render.bodies` function in the `/src/render/Render.js` file at line 616. This file determines how the canvas is rendered. The file directory under `src` is pretty clean, I would recommend poking around the different directories to understand big picture how the lib works.
 
+The way that I've been developing this so far is I've been modifying the code in `/src/render/Render.js`, then I build the project, which generates a minified JS file, which I then copy and paste into the app, which an HTML file then includes with a script tag.
+
+I am planning to change this so that the output goes straight to the app directory, but I imagine that there may be issues with this as the build uses Gulp to output the files, and outputting to another app could pose some problems. 
 
 
 <img alt="Matter.js" src="http://brm.io/matter-js/img/matter-js.svg" width="300">
